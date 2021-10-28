@@ -3,7 +3,7 @@ import React from "react";
 
 export const About = () => {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" component="section">
       <Typography variant="h3" component="h3">
         About me
       </Typography>

@@ -3,7 +3,7 @@ import React from "react";
 
 export const Landing = () => {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" component="section">
       <Typography variant="h1" component="h1">
         Hey, I'm Kevin.
       </Typography>
