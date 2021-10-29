@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
 import { FaFilePdf, FaGithub, FaLink } from "react-icons/fa";
@@ -10,24 +10,41 @@ const DevItem = styled("li")({
 
 export const Project = (props) => {
   return (
-    <Grid container spacing={1} sx={{ display: "flex" }}>
+    <Grid
+      container
+      spacing={0}
+      sx={{ display: "flex", p: 1 }}
+      component={Paper}
+    >
+      {props.large ? (
+        <Grid item xs={12}>
+          <Typography variant="h4" component="h4" sx={{ mb: 1 }}>
+            {props.title}
+          </Typography>
+        </Grid>
+      ) : null}
+
+      {/* project description */}
       <Grid
         item
         xs={12}
-        md={6}
-        sx={{ display: "flex", flexDirection: "column" }}
+        md={props.large ? 6 : 12}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          order: props.large ? 1 : 2,
+        }}
       >
-        <Typography variant="h4" component="h4">
-          {props.title}
-        </Typography>
-
+        {!props.large ? (
+          <Grid item xs={12}>
+            <Typography variant="h4" component="h4" sx={{ my: 2 }}>
+              {props.title}
+            </Typography>
+          </Grid>
+        ) : null}
         <Typography variant="body1" component="p">
           {props.summary}
         </Typography>
-
-        {/* <Typography variant="body1" component="p">
-          {props.devProcess}
-        </Typography> */}
 
         <Box component="ul">
           {props.devProcessItems
@@ -43,18 +60,20 @@ export const Project = (props) => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h6" component="h6">
+          {/* <Typography variant="h6" component="h6">
             Used technologies
-          </Typography>
+          </Typography> */}
           <TechnologyList technologies={props.technologies} />
         </Box>
 
-        <Stack direction="row">
+        <Stack direction="row" spacing={1} sx={{ mt: 4 }}>
           <Button
             variant="outlined"
             startIcon={<FaGithub />}
             aria-label="GitHub repository"
             href={props.repoLink}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             source code
           </Button>
@@ -64,6 +83,8 @@ export const Project = (props) => {
               startIcon={<FaLink />}
               aria-label="Project website"
               href={props.websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               website
             </Button>
@@ -74,6 +95,8 @@ export const Project = (props) => {
               startIcon={<FaFilePdf />}
               aria-label="PDF document download"
               href={props.pdfLink}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               PDF
             </Button>
@@ -81,20 +104,22 @@ export const Project = (props) => {
         </Stack>
       </Grid>
 
+      {/* project image */}
       <Grid
         item
         xs={12}
-        md={6}
+        md={props.large ? 6 : 12}
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          order: props.large ? 2 : 1,
         }}
       >
         <img
-          style={{ maxWidth: "512px", alignSelf: "center" }}
-          src="/logo512.png"
-          alt="project image"
+          style={{ width: "100%", alignSelf: "center", borderRadius: 5 }}
+          src={props.image ? props.image : "/logo512.png"}
+          alt="project highlight"
         />
       </Grid>
     </Grid>

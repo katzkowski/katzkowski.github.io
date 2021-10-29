@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
 import { TechnologyChip } from "./TechnologyChip";
 
@@ -9,8 +9,8 @@ export const TechnologyList = (props) => {
     : null;
 
   return (
-    <Box sx={{ display: "flex", flexWrap: "wrap", listStyle: "none" }}>
+    <Stack spacing={1} direction="row" sx={{ flexWrap: "wrap" }}>
       {technologies}
-    </Box>
+    </Stack>
   );
 };
