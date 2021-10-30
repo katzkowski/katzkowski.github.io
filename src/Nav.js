@@ -1,13 +1,27 @@
-import { AppBar, Button, Container, Typography } from "@mui/material";
+import { AppBar, Box, Button, Container, Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import { styled } from "@mui/system";
 import React from "react";
 
+const StyledNavButton = styled(Button)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  textTransform: "none",
+}));
+
 export const Nav = () => {
+  // trigger to show navbar background color
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 });
+
   return (
     <AppBar
       position="sticky"
-      // sx={{ background: "transparent", boxShadow: "none" }}
+      sx={{
+        background: !trigger && "transparent",
+        boxShadow: "none",
+        transition: ".5s background",
+      }}
     >
       <Container maxWidth="xl" sx={{ px: { xs: 0, md: 0, lg: 0 } }}>
         <Toolbar
@@ -16,14 +30,15 @@ export const Nav = () => {
             justifyContent: "space-between",
           }}
         >
-          <Typography variant="h5" component="h5">
-            Kevin Katzkowski
+          <Typography variant="h6" component="h6" sx={{ fontWeight: "500" }}>
+            <Box sx={{ display: "inline", color: "primary.main" }}>Kevin</Box>{" "}
+            Katzkowski
           </Typography>
 
           <Stack spacing={2} direction="row">
-            <Button
+            <StyledNavButton
+              size="large"
               variant="text"
-              color="secondary"
               onClick={() =>
                 document
                   .getElementById("about")
@@ -31,10 +46,10 @@ export const Nav = () => {
               }
             >
               About
-            </Button>
-            <Button
+            </StyledNavButton>
+            <StyledNavButton
+              size="large"
               variant="text"
-              color="secondary"
               onClick={() =>
                 document
                   .getElementById("projects")
@@ -42,10 +57,10 @@ export const Nav = () => {
               }
             >
               Projects
-            </Button>
-            <Button
+            </StyledNavButton>
+            <StyledNavButton
+              size="large"
               variant="text"
-              color="secondary"
               onClick={() =>
                 document
                   .getElementById("skills")
@@ -53,10 +68,10 @@ export const Nav = () => {
               }
             >
               Skills
-            </Button>
-            <Button
+            </StyledNavButton>
+            <StyledNavButton
+              size="large"
               variant="text"
-              color="secondary"
               onClick={() =>
                 document
                   .getElementById("contact")
@@ -64,7 +79,7 @@ export const Nav = () => {
               }
             >
               Contact
-            </Button>
+            </StyledNavButton>
           </Stack>
         </Toolbar>
       </Container>

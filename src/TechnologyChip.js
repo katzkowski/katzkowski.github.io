@@ -12,10 +12,26 @@ export const TechnologyChip = (props) => {
     return IconComponent ? <IconComponent /> : null;
   };
 
-  return (
+  return props.large ? (
+    <Chip
+      sx={{
+        p: 2,
+        borderRadius: "10px",
+        fontSize: "0.9rem",
+        flexGrow: 0,
+        fontWeight: 500,
+        color: "text.primary",
+        // bgcolor: props.color ? `${props.color}.main` : "default",
+      }}
+      // icon={getIcon(props.name)}
+      label={props.name}
+      variant="outlined"
+      color={props.color ? props.color : "default"}
+    />
+  ) : (
     <Chip
       sx={{ maxWidth: "8rem" }}
-      icon={getIcon(props.name)}
+      // icon={getIcon(props.name)}
       label={props.name}
       variant="outlined"
     />

@@ -4,12 +4,21 @@ import { TechnologyList } from "./TechnologyList";
 
 export const Skills = () => {
   return (
-    <Container maxWidth="xl" component="section" id="skills">
-      <Typography variant="h3" component="h3" sx={{ my: 4 }}>
+    <Container
+      maxWidth="xl"
+      component="section"
+      id="skills"
+      sx={{ bgcolor: "grey.900", py: 8 }}
+    >
+      <Typography variant="h3" component="h3" sx={{ mb: 5 }}>
         Skills
       </Typography>
 
-      <Grid container spacing={12} sx={{ justifyContent: "center" }}>
+      <Grid
+        container
+        spacing={{ xs: 4, md: 6, lg: 10, xl: 14 }}
+        sx={{ justifyContent: "center" }}
+      >
         {/* Programming languages */}
         <Grid item>
           <Typography variant="h5" component="h5" sx={{ my: 2 }}>
@@ -26,6 +35,8 @@ export const Skills = () => {
               "C / C++",
               "HTML5 & CSS3",
             ]}
+            large
+            color="error"
           />
         </Grid>
 
@@ -42,9 +53,10 @@ export const Skills = () => {
               "Jupyter",
               "Pandas",
               "Keras",
-              "TensorFlow",
+              // "TensorFlow",
             ]}
-            sx={{ width: "auto" }}
+            large
+            color="success"
           />
         </Grid>
 
@@ -63,7 +75,8 @@ export const Skills = () => {
               "Material UI",
               "JavaFX",
             ]}
-            sx={{ width: "auto" }}
+            large
+            color="info"
           />
         </Grid>
 
@@ -83,7 +96,8 @@ export const Skills = () => {
               "LaTeX",
               "MS Office",
             ]}
-            sx={{ width: "auto" }}
+            large
+            color="secondary"
           />
         </Grid>
       </Grid>

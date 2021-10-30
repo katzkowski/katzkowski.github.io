@@ -24,7 +24,8 @@ export const Landing = () => {
         }}
       >
         <Typography variant="h1" component="h1" sx={{ my: 4 }}>
-          Hey, I'm Kevin.
+          Hey, I'm{" "}
+          <Box sx={{ display: "inline", color: "primary.main" }}>Kevin</Box>.
         </Typography>
 
         <Typography

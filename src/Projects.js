@@ -4,11 +4,11 @@ import { Project } from "./Project";
 
 export const Projects = () => {
   return (
-    <Container id="projects" maxWidth="xl" component="section">
-      <Typography variant="h3" component="h3" sx={{ my: 4 }}>
+    <Container id="projects" maxWidth="xl" component="section" sx={{ py: 8 }}>
+      <Typography variant="h3" component="h3" sx={{ mb: 5 }}>
         Projects
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         <Grid item xs={12}>
           <Project
             title="Generating Website Layouts with AI from Natural Language"
@@ -61,7 +61,7 @@ export const Projects = () => {
             image={"/graph-algo.PNG"}
             technologies={[
               "React",
-              "Gatsby.js",
+              "Gatsby",
               "GraphQL",
               "JavaScript",
               "HTML5",

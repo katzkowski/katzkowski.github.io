@@ -5,8 +5,13 @@ import { TimelineCard } from "./TimelineCard";
 
 export const About = () => {
   return (
-    <Container maxWidth="xl" component="section" id="about">
-      <Typography variant="h3" component="h3" sx={{ my: 4 }}>
+    <Container
+      maxWidth="xl"
+      component="section"
+      id="about"
+      sx={{ bgcolor: "grey.900", boxSizing: "border-box", py: 8 }}
+    >
+      <Typography variant="h3" component="h3" sx={{ mb: 5 }}>
         About me
       </Typography>
       <Grid container spacing={4}>
