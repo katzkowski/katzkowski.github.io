@@ -5,7 +5,7 @@ import { TimelineCard } from "./TimelineCard";
 
 export const About = () => {
   return (
-    <Container maxWidth="xl" component="section" id="about-me">
+    <Container maxWidth="xl" component="section" id="about">
       <Typography variant="h3" component="h3" sx={{ my: 4 }}>
         About me
       </Typography>

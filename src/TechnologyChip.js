@@ -13,6 +13,11 @@ export const TechnologyChip = (props) => {
   };
 
   return (
-    <Chip icon={getIcon(props.name)} label={props.name} variant="outlined" />
+    <Chip
+      sx={{ maxWidth: "8rem" }}
+      icon={getIcon(props.name)}
+      label={props.name}
+      variant="outlined"
+    />
   );
 };

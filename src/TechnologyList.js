@@ -9,7 +9,11 @@ export const TechnologyList = (props) => {
     : null;
 
   return (
-    <Stack spacing={1} direction="row" sx={{ flexWrap: "wrap" }}>
+    <Stack
+      spacing={1}
+      direction={props.direction == "column" ? "column" : "row"}
+      sx={{ flexWrap: "wrap" }}
+    >
       {technologies}
     </Stack>
   );
