@@ -28,7 +28,7 @@ export const Projects = () => {
               "Flask",
               "React",
             ]}
-            repoLink={"https://github.com"}
+            repoLink={"https://github.com/katzkowski/ba-code"}
             websiteLink={"https://google.com"}
             pdfLink={"/"}
             large
@@ -44,8 +44,7 @@ export const Projects = () => {
               "A longer step 3",
             ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
-            repoLink={"https://github.com"}
-            websiteLink={"https://google.com"}
+            repoLink={"https://github.com/jakhac/song-popularity"}
             pdfLink={"/"}
             large
           />
@@ -53,11 +52,11 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="algo-lib"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
+            summary="Library of algorithms encountered during studies with short descriptions and complexity info"
             devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
+              "Developed with React and Gatsby.js",
+              "Data management with GraphQL",
+              "Component styling using styled-components",
             ]}
             image={"/graph-algo.PNG"}
             technologies={[
@@ -68,18 +67,19 @@ export const Projects = () => {
               "HTML5",
               "CSS3",
             ]}
-            repoLink={"https://github.com/jakhac/graph-algorithms"}
-            websiteLink={"https://graph-algorithms.io"}
+            repoLink={"https://github.com/katzkowski/algo-lib"}
+            websiteLink={"https://katzkowski.github.io/algo-lib/"}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <Project
             title="Graph Algorithm Visualizer"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
+            summary="Web application for the interactive visualization of graph algorithms on custom graphs"
             devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
+              "Custom graphs can be drawn on the canvas",
+              "Visual highlighting of the algorithm's path",
+              "Backend and frontend written in Vanilla JavaScript",
+              // "HTML5 & CSS3 for styling",
             ]}
             image={"/graph-algo.PNG"}
             technologies={["JavaScript", "HTML5", "CSS3"]}
@@ -90,33 +90,34 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="Elephanture Chatbot"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
+            summary="Development of an interactive adventure-game chatbot which makes use of the OpenAI GPT-2"
             devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
+              "Team leader of project group of 12 students",
+              "Project management with Jira",
+              "Web server development in Python using Flask-Socketio",
+              "Frontend development with JavaScript, HTML5 & CSS3",
+              "Database development with SQL",
             ]}
             image={"/graph-algo.PNG"}
             technologies={[
               "Python",
               "Flask",
-              "SQL",
               "JavaScript",
               "HTML5",
               "CSS3",
+              "SQL",
             ]}
-            repoLink={"https://github.com/jakhac/graph-algorithms"}
-            websiteLink={"https://graph-algorithms.io"}
+            repoLink={"https://github.com/minotalen/chatbot-group"}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <Project
             title="Chemulator"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
+            summary="Java application for the computation of chemical formulas  available on Desktop and Android "
             devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
+              "Desktop application with Java 8 and JavaFX",
+              "Android app developed in Android Studio",
+              "Project website with JavaScript, HTML5 & CSS3",
             ]}
             image={"/graph-algo.PNG"}
             technologies={["Java", "JavaScript", "HTML5", "CSS3"]}

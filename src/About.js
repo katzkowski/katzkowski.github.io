@@ -5,7 +5,7 @@ import { TimelineCard } from "./TimelineCard";
 
 export const About = () => {
   return (
-    <Container maxWidth="xl" component="section">
+    <Container maxWidth="xl" component="section" id="about-me">
       <Typography variant="h3" component="h3" sx={{ my: 4 }}>
         About me
       </Typography>
@@ -62,7 +62,7 @@ export const About = () => {
             <TimelineCard
               title="Working Student"
               startDate="2017"
-              startDate="2020"
+              endDate="2020"
               description="WebMen Internet GmbH"
               img="./webmen-logo.jpg"
               imgAlt="WebMen Logo"
