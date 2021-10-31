@@ -12,11 +12,11 @@ export const Projects = () => {
         <Grid item xs={12}>
           <Project
             title="Generating Website Layouts with AI from Natural Language"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
+            summary="Generative Adversarial Networks (GANs) trained to generate images of websites based on natural language messages send to a chatbot"
             devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
+              "Self-created dataset by web scraping",
+              "Custom dataset metrics transferred from information retrieval domain",
+              "Self-developed chatbot based on spaCy NLP library",
             ]}
             technologies={[
               "Python",
@@ -24,12 +24,13 @@ export const Projects = () => {
               "Pandas",
               "MySQL",
               "Google Cloud",
-              "Scikit-Learn",
+              "scikit-learn",
+              "spaCy",
               "Flask",
               "React",
             ]}
             repoLink={"https://github.com/katzkowski/ba-code"}
-            websiteLink={"https://google.com"}
+            websiteLink={"https://webgen-bot.netlify.app/"}
             pdfLink={"/"}
             large
           />
@@ -37,12 +38,12 @@ export const Projects = () => {
         <Grid item xs={12}>
           <Project
             title="Song Popularity Prediction"
-            summary="Summary sentence that briefly describes the idea of the project and my main contributions to it."
-            devProcessItems={[
-              "Development step 1 with technology 1",
-              "Step 2",
-              "A longer step 3",
-            ]}
+            summary="Prediction of a song's popularity based on musical features and artist data from Spotify, in combination with self-collected lyrical features"
+            // devProcessItems={[
+            //   "Development step 1 with technology 1",
+            //   "Step 2",
+            //   "A longer step 3",
+            // ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
             repoLink={"https://github.com/jakhac/song-popularity"}
             pdfLink={"/"}
@@ -52,7 +53,7 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="algo-lib"
-            summary="Library of algorithms encountered during studies with short descriptions and complexity info"
+            summary="Library of algorithms encountered during studies with short descriptions and complexity information"
             devProcessItems={[
               "Developed with React and Gatsby.js",
               "Data management with GraphQL",

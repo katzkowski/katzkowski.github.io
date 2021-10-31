@@ -17,9 +17,9 @@ export const TechnologyList = (props) => {
 
   return (
     <Stack
-      spacing={1}
+      spacing={0}
       direction={props.direction === "column" ? "column" : "row"}
-      sx={{ flexWrap: "wrap" }}
+      sx={{ flexWrap: "wrap", gap: "0.25rem" }}
     >
       {technologies}
     </Stack>

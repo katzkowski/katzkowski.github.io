@@ -1,4 +1,13 @@
-import { AppBar, Box, Button, Container, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  SwipeableDrawer,
+  Typography,
+} from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
@@ -13,6 +22,12 @@ const StyledNavButton = styled(Button)(({ theme }) => ({
 export const Nav = () => {
   // trigger to show navbar background color
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 });
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (open) => {
+    setOpen(open);
+  };
 
   return (
     <AppBar
@@ -35,7 +50,11 @@ export const Nav = () => {
             Katzkowski
           </Typography>
 
-          <Stack spacing={2} direction="row">
+          <Stack
+            spacing={1}
+            direction="row"
+            sx={{ display: { xs: "none", sm: "flex" } }}
+          >
             <StyledNavButton
               size="large"
               variant="text"
@@ -81,6 +100,76 @@ export const Nav = () => {
               Contact
             </StyledNavButton>
           </Stack>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ display: { xs: "inline-flex", sm: "none" } }}
+            onClick={() => toggleDrawer(!open)}
+          >
+            <MenuIcon />
+          </IconButton>
+
+          <SwipeableDrawer
+            anchor="right"
+            open={open}
+            onOpen={() => toggleDrawer(true)}
+            onClose={() => toggleDrawer(false)}
+          >
+            <Stack
+              spacing={2}
+              direction="column"
+              sx={{
+                display: { xs: "flex", sm: "none" },
+                p: 2,
+              }}
+            >
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("about")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                About
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Projects
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("skills")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Skills
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Contact
+              </StyledNavButton>
+            </Stack>
+          </SwipeableDrawer>
         </Toolbar>
       </Container>
     </AppBar>

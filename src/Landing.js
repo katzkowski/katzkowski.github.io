@@ -12,18 +12,19 @@ export const Landing = () => {
         display: "flex",
         justifyContent: "space-between",
         mt: 4,
+        pr: { xs: 0, sm: 0, md: 0, lg: 0, xl: 0 },
       }}
     >
       <Box
         sx={{
-          mt: { xs: "5vw", md: "15vw" },
+          mt: { xs: 0, md: "15vw" },
           flexShrink: 1,
           width: "65%",
           zIndex: 1,
           position: "absolute",
         }}
       >
-        <Typography variant="h1" component="h1" sx={{ my: 4 }}>
+        <Typography variant="h1" component="h1" sx={{ my: { xs: 0, md: 4 } }}>
           Hey, I'm{" "}
           <Box sx={{ display: "inline", color: "primary.main" }}>Kevin</Box>.
         </Typography>

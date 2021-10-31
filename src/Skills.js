@@ -8,7 +8,10 @@ export const Skills = () => {
       maxWidth="xl"
       component="section"
       id="skills"
-      sx={{ bgcolor: "grey.900", py: 8 }}
+      sx={{
+        bgcolor: "grey.900",
+        py: 8,
+      }}
     >
       <Typography variant="h3" component="h3" sx={{ mb: 5 }}>
         Skills
@@ -16,11 +19,11 @@ export const Skills = () => {
 
       <Grid
         container
-        spacing={{ xs: 4, md: 6, lg: 10, xl: 14 }}
+        spacing={{ xs: 4, xl: 14 }}
         sx={{ justifyContent: "center" }}
       >
         {/* Programming languages */}
-        <Grid item>
+        <Grid item xs={8} sm={5} md={3}>
           <Typography variant="h5" component="h5" sx={{ my: 2 }}>
             Languages
           </Typography>
@@ -41,19 +44,20 @@ export const Skills = () => {
         </Grid>
 
         {/* AI technologies */}
-        <Grid item>
+        <Grid item xs={8} sm={5} md={3}>
           <Typography variant="h5" component="h5" sx={{ my: 2 }}>
-            AI technologies
+            AI & Data Science
           </Typography>
           <TechnologyList
             direction="column"
             technologies={[
               "Pytorch",
               "scikit-learn",
+              "spaCy",
               "Jupyter",
               "Pandas",
               "Keras",
-              // "TensorFlow",
+              "matplotlib",
             ]}
             large
             color="success"
@@ -61,7 +65,7 @@ export const Skills = () => {
         </Grid>
 
         {/* Other, more general frameworks */}
-        <Grid item>
+        <Grid item xs={8} sm={5} md={3}>
           <Typography variant="h5" component="h5" sx={{ my: 2 }}>
             Other frameworks
           </Typography>
@@ -81,7 +85,7 @@ export const Skills = () => {
         </Grid>
 
         {/* Software tools */}
-        <Grid item>
+        <Grid item xs={8} sm={5} md={3}>
           <Typography variant="h5" component="h5" sx={{ my: 2 }}>
             Tools
           </Typography>
