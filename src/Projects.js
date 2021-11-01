@@ -11,12 +11,17 @@ export const Projects = () => {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <Project
-            title="Generating Website Layouts with AI from Natural Language"
+            title="Generating Website Layouts with AI from Natural Language Input"
             summary="Generative Adversarial Networks (GANs) trained to generate images of websites based on natural language messages send to a chatbot"
             devProcessItems={[
               "Self-created dataset by web scraping",
-              "Custom dataset metrics transferred from information retrieval domain",
+              "Introduced custom label quality metrics transferred from information retrieval domain",
+              "Re-labeled dataset based on visual similarity based on k-means clustering and label quality metrics",
               "Self-developed chatbot based on spaCy NLP library",
+              "Multiple GANs trained at large-scale with transfer learning approach using Google Cloud Platform and PyTorch",
+              "NVIDIA Tesla V100 GPU used as accelerator and for higher image resolution (512 x 512 px)",
+              "Developed chatbot from scratch with spaCy NLP library",
+              "UI written in React using Material-UI framework",
             ]}
             technologies={[
               "Python",
@@ -39,11 +44,12 @@ export const Projects = () => {
           <Project
             title="Song Popularity Prediction"
             summary="Prediction of a song's popularity based on musical features and artist data from Spotify, in combination with self-collected lyrical features"
-            // devProcessItems={[
-            //   "Development step 1 with technology 1",
-            //   "Step 2",
-            //   "A longer step 3",
-            // ]}
+            devProcessItems={[
+              "Lyrics for songs of Spotify dataset fetched from Genius API",
+              "Stored songs with custom lyric metrics and other features in SQL database",
+              "Trained classifiers for musical, lyrical and artist features",
+              "Used ensemble learning methods to increase accurarcy",
+            ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
             repoLink={"https://github.com/jakhac/song-popularity"}
             pdfLink={"/"}

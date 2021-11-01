@@ -72,7 +72,7 @@ export const Project = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              source code
+              code
             </Button>
             {props.websiteLink ? (
               <Button
