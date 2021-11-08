@@ -1,5 +1,5 @@
 import Timeline from "@mui/lab/Timeline";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Link, Typography } from "@mui/material";
 import React from "react";
 import { TimelineCard } from "./TimelineCard";
 
@@ -26,16 +26,45 @@ export const About = () => {
               Kevin Katzkowski
             </Typography>
 
-            <Typography variant="caption" component="div" sx={{ mb: 2 }}>
+            <Typography variant="caption" component="div" sx={{ mb: 3 }}>
               M. Sc. Informatics student at the Technical University of Munich
             </Typography>
 
-            <Typography variant="body1" component="div">
-              I'm a Master Informatics student at TUM with a passion for
-              computer science and technology in general. Specifically, I'm
-              focused on deep learning, computer vision, data science and other
-              artificial intelligence topics like machine learning and natural
-              language processing.
+            <Typography variant="body1" component="div" sx={{ mb: 2 }}>
+              I'm a Master Informatics student in the first semester with a huge
+              passion for computer science and technology in general.
+              Specifically, I'm focused on deep learning, computer vision, data
+              science and other artificial intelligence topics like machine
+              learning and natural language processing.
+            </Typography>
+
+            <Typography variant="body1" component="div" sx={{ mb: 2 }}>
+              Software development is another passion of mine. I have three
+              years of experience in several programming languages, including
+              Python, JavaScript, Java and others. See the{" "}
+              <Link href="#skills" underline="hover">
+                skills
+              </Link>{" "}
+              section for a comprehensive list and the{" "}
+              <Link href="#projects" underline="hover">
+                projects
+              </Link>{" "}
+              section below for a selection of my projects at the intersection
+              of AI, data science and software development.
+            </Typography>
+
+            <Typography variant="body1" component="div" sx={{ mb: 2 }}>
+              Besides that, I enjoy solving complex mathematical and logical
+              problems. In my Media Informatics bachelor's studies, I
+              additionally took modules in the mathematical and logical domain
+              worth 37 credits to extend my theoretical background.
+            </Typography>
+
+            <Typography variant="body1" component="div" sx={{ mb: 2 }}>
+              My clear aim for the future is to continue my specialization in
+              deep learning, computer vision as well as machine learning, so I
+              can significantly contribute to the technological advance in the
+              field of artificial intelligence and data science.
             </Typography>
           </Grid>
 
@@ -74,7 +103,7 @@ export const About = () => {
                 startDate="2017"
                 endDate="2020"
                 description="WebMen Internet GmbH"
-                img="./webmen-logo.jpg"
+                img="./webmen-logo.png"
                 imgAlt="WebMen Logo"
                 imgHref="https://webmen.de/"
               />
@@ -83,7 +112,7 @@ export const About = () => {
                 title="Intern Software Dev."
                 startDate="04.2017"
                 description="WebMen Internet GmbH"
-                img="./webmen-logo.jpg"
+                img="./webmen-logo.png"
                 imgAlt="WebMen Logo"
                 imgHref="https://webmen.de/"
               />

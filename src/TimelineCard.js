@@ -86,19 +86,20 @@ export const TimelineCard = (props) => {
               marginLeft: "auto",
             }}
           >
-            <img
-              src={props.img}
-              alt={props.imgAlt}
-              href={props.imgHref}
-              style={{
-                display: "block",
-                maxWidth: "4rem",
-                maxHeight: "3rem",
-                height: "auto",
-                width: "auto",
-                alignSelf: "flex-end",
-              }}
-            />
+            <a href={props.imgHref}>
+              <img
+                src={props.img}
+                alt={props.imgAlt}
+                style={{
+                  display: "block",
+                  maxWidth: "4rem",
+                  maxHeight: "3rem",
+                  height: "auto",
+                  width: "auto",
+                  alignSelf: "flex-end",
+                }}
+              />
+            </a>
           </Box>
         </Paper>
       </TimelineContent>

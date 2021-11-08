@@ -82,6 +82,7 @@ export const Skills = () => {
                 "React",
                 "Gatsby",
                 "Material UI",
+                "Bootstrap",
                 "JavaFX",
               ]}
               large

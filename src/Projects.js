@@ -12,7 +12,7 @@ export const Projects = () => {
         <Grid item xs={12}>
           <Project
             title="Generating Website Layouts with AI from Natural Language Input"
-            summary="Generative Adversarial Networks (GANs) trained to generate images of websites based on natural language messages send to a chatbot"
+            summary="Trained Generative Adversarial Networks (GANs) to generate images of websites based on natural language messages send to a chatbot"
             devProcessItems={[
               "Self-created dataset by web scraping",
               "Introduced custom label quality metrics transferred from information retrieval domain",
@@ -21,7 +21,7 @@ export const Projects = () => {
               "Multiple GANs trained at large-scale with transfer learning approach using Google Cloud Platform and PyTorch",
               "NVIDIA Tesla V100 GPU used as accelerator and for higher image resolution (512 x 512 px)",
               "Developed chatbot from scratch with spaCy NLP library",
-              "UI written in React using Material-UI framework",
+              "Chatbot UI written in React using Material-UI framework",
             ]}
             technologies={[
               "Python",
@@ -34,9 +34,10 @@ export const Projects = () => {
               "Flask",
               "React",
             ]}
-            repoLink={"https://github.com/katzkowski/ba-code"}
+            image={"/generated-websites-samples.jpg"}
+            repoLink={"https://github.com/katzkowski/webgen-chatbot"}
             websiteLink={"https://webgen-bot.netlify.app/"}
-            pdfLink={"/"}
+            // pdfLink={"/"}
             large
           />
         </Grid>
@@ -51,8 +52,9 @@ export const Projects = () => {
               "Used ensemble learning methods to increase accurarcy",
             ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
+            image={"/song-popularity-hero.jpg"}
             repoLink={"https://github.com/jakhac/song-popularity"}
-            pdfLink={"/"}
+            // pdfLink={"/"}
             large
           />
         </Grid>
@@ -65,7 +67,7 @@ export const Projects = () => {
               "Data management with GraphQL",
               "Component styling using styled-components",
             ]}
-            image={"/graph-algo.PNG"}
+            image={"/algo-lib-hero.jpg"}
             technologies={[
               "React",
               "Gatsby",
@@ -105,7 +107,7 @@ export const Projects = () => {
               "Frontend development with JavaScript, HTML5 & CSS3",
               "Database development with SQL",
             ]}
-            image={"/graph-algo.PNG"}
+            image={"/elephanture-hero.PNG"}
             technologies={[
               "Python",
               "Flask",
@@ -114,22 +116,22 @@ export const Projects = () => {
               "CSS3",
               "SQL",
             ]}
-            repoLink={"https://github.com/minotalen/chatbot-group"}
+            repoLink={"https://github.com/katzkowski/chatbot-group"}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <Project
-            title="Chemulator"
+            title="chemulator"
             summary="Java application for the computation of chemical formulas  available on Desktop and Android "
             devProcessItems={[
               "Desktop application with Java 8 and JavaFX",
               "Android app developed in Android Studio",
               "Project website with JavaScript, HTML5 & CSS3",
             ]}
-            image={"/graph-algo.PNG"}
+            image={"/chemulator-hero.jpg"}
             technologies={["Java", "JavaScript", "HTML5", "CSS3"]}
-            repoLink={"https://github.com/jakhac/graph-algorithms"}
-            websiteLink={"https://graph-algorithms.io"}
+            repoLink={"https://github.com/katzkowski/chemulator/"}
+            websiteLink={"https://katzkowski.github.io/chemulator/"}
           />
         </Grid>
       </Grid>
