@@ -52,7 +52,7 @@ export const Projects = () => {
               "Used ensemble learning methods to increase accurarcy",
             ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
-            image={"/song-popularity-hero.jpg"}
+            image={"/song-popularity-hero.JPG"}
             repoLink={"https://github.com/jakhac/song-popularity"}
             // pdfLink={"/"}
             large
@@ -107,7 +107,7 @@ export const Projects = () => {
               "Frontend development with JavaScript, HTML5 & CSS3",
               "Database development with SQL",
             ]}
-            image={"/elephanture-hero.PNG"}
+            image={"/elephanture-hero.png"}
             technologies={[
               "Python",
               "Flask",
