@@ -51,7 +51,7 @@ export const Projects = () => {
               "spaCy",
               "React",
             ]}
-            image={"/generated-websites-samples-small.JPG"}
+            image={"/generated-websites-samples-small.jpg"}
             repoLink={"https://github.com/katzkowski/webgen-chatbot"}
             websiteLink={"https://webgen-bot.netlify.app/"}
             // pdfLink={"/"}
