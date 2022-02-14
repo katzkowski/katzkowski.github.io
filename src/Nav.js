@@ -25,10 +25,6 @@ export const Nav = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (open) => {
-    setOpen(open);
-  };
-
   return (
     <AppBar
       position="sticky"
@@ -105,7 +101,7 @@ export const Nav = () => {
             color="inherit"
             aria-label="menu"
             sx={{ display: { xs: "inline-flex", sm: "none" } }}
-            onClick={() => toggleDrawer(!open)}
+            onClick={() => setOpen(true)}
           >
             <MenuIcon />
           </IconButton>
@@ -113,11 +109,12 @@ export const Nav = () => {
           <SwipeableDrawer
             anchor="right"
             open={open}
-            onOpen={() => toggleDrawer(true)}
-            onClose={() => toggleDrawer(false)}
+            onOpen={() => setOpen(true)}
+            onClose={() => setOpen(false)}
           >
             <Stack
               spacing={2}
+              onClick={() => setOpen(false)}
               direction="column"
               sx={{
                 display: { xs: "flex", sm: "none" },
@@ -127,44 +124,64 @@ export const Nav = () => {
               <StyledNavButton
                 size="large"
                 variant="text"
-                onClick={() =>
-                  document
-                    .getElementById("about")
-                    .scrollIntoView({ block: "start", behavior: "smooth" })
-                }
+                onClick={() => {
+                  // scroll after drawer was closed
+                  setTimeout(
+                    () =>
+                      document
+                        .getElementById("about")
+                        .scrollIntoView({ block: "start", behavior: "smooth" }),
+                    100
+                  );
+                }}
               >
                 About
               </StyledNavButton>
               <StyledNavButton
                 size="large"
                 variant="text"
-                onClick={() =>
-                  document
-                    .getElementById("projects")
-                    .scrollIntoView({ block: "start", behavior: "smooth" })
-                }
+                onClick={() => {
+                  // scroll after drawer was closed
+                  setTimeout(
+                    () =>
+                      document
+                        .getElementById("projects")
+                        .scrollIntoView({ block: "start", behavior: "smooth" }),
+                    100
+                  );
+                }}
               >
                 Projects
               </StyledNavButton>
               <StyledNavButton
                 size="large"
                 variant="text"
-                onClick={() =>
-                  document
-                    .getElementById("skills")
-                    .scrollIntoView({ block: "start", behavior: "smooth" })
-                }
+                onClick={() => {
+                  // scroll after drawer was closed
+                  setTimeout(
+                    () =>
+                      document
+                        .getElementById("skills")
+                        .scrollIntoView({ block: "start", behavior: "smooth" }),
+                    100
+                  );
+                }}
               >
                 Skills
               </StyledNavButton>
               <StyledNavButton
                 size="large"
                 variant="text"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    .scrollIntoView({ block: "start", behavior: "smooth" })
-                }
+                onClick={() => {
+                  // scroll after drawer was closed
+                  setTimeout(
+                    () =>
+                      document
+                        .getElementById("contact")
+                        .scrollIntoView({ block: "start", behavior: "smooth" }),
+                    100
+                  );
+                }}
               >
                 Contact
               </StyledNavButton>

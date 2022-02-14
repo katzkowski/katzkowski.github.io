@@ -10,12 +10,38 @@ const DevItem = styled("li")({
 
 export const Project = (props) => {
   return (
-    <Paper variant="outlined">
-      <Grid container spacing={0} sx={{ display: "flex", p: 3 }}>
+    <Paper variant="outlined" sx={{ bgcolor: "grey.900" }}>
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={4}
+        sx={{ display: "flex", p: 3 }}
+      >
         {props.large ? (
           <Grid item xs={12}>
             <Typography variant="h4" component="h4" sx={{ mb: 3 }}>
               {props.title}
+            </Typography>
+          </Grid>
+        ) : null}
+
+        {/* Lead text for large card above image for mobile */}
+        {props.large ? (
+          <Grid
+            item
+            xs={12}
+            sx={{
+              display: { xs: "flex", md: "none" },
+              flexDirection: "column",
+              order: 0,
+            }}
+          >
+            <Typography
+              variant="body1"
+              component="p"
+              sx={{ color: "text.secondary", mb: { xs: 2, md: 0 } }}
+            >
+              {props.summary}
             </Typography>
           </Grid>
         ) : null}
@@ -28,7 +54,7 @@ export const Project = (props) => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            order: props.large ? 1 : 2,
+            order: props.large ? { xs: 2, md: 1 } : 2,
           }}
         >
           {!props.large ? (
@@ -41,7 +67,10 @@ export const Project = (props) => {
           <Typography
             variant="body1"
             component="p"
-            sx={{ color: "text.secondary" }}
+            sx={{
+              color: "text.secondary",
+              display: props.large ? { xs: "none", md: "block" } : "block",
+            }}
           >
             {props.summary}
           </Typography>
@@ -64,16 +93,18 @@ export const Project = (props) => {
           </Box>
 
           <Stack direction="row" spacing={1} sx={{ mt: 4 }}>
-            <Button
-              variant="outlined"
-              startIcon={<FaGithub />}
-              aria-label="GitHub repository"
-              href={props.repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              source code
-            </Button>
+            {props.repoLink ? (
+              <Button
+                variant="outlined"
+                startIcon={<FaGithub />}
+                aria-label="GitHub repository"
+                href={props.repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                code
+              </Button>
+            ) : null}
             {props.websiteLink ? (
               <Button
                 variant="outlined"
@@ -110,7 +141,7 @@ export const Project = (props) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            order: props.large ? 2 : 1,
+            order: props.large ? { xs: 1, md: 2 } : 1,
           }}
         >
           <img
