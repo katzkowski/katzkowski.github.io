@@ -1,3 +1,5 @@
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
@@ -46,66 +48,91 @@ export const Nav = () => {
             Katzkowski
           </Typography>
 
-          <Stack
-            spacing={1}
-            direction="row"
-            sx={{ display: { xs: "none", sm: "flex" } }}
-          >
-            <StyledNavButton
-              size="large"
-              variant="text"
-              onClick={() =>
-                document
-                  .getElementById("about")
-                  .scrollIntoView({ block: "start", behavior: "smooth" })
-              }
+          <Stack spacing={{ sm: 1, md: 2 }} direction="row">
+            <Stack
+              spacing={{ sm: 0, md: 1 }}
+              direction="row"
+              sx={{ display: { xs: "none", sm: "flex" } }}
             >
-              About
-            </StyledNavButton>
-            <StyledNavButton
-              size="large"
-              variant="text"
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  .scrollIntoView({ block: "start", behavior: "smooth" })
-              }
-            >
-              Projects
-            </StyledNavButton>
-            <StyledNavButton
-              size="large"
-              variant="text"
-              onClick={() =>
-                document
-                  .getElementById("skills")
-                  .scrollIntoView({ block: "start", behavior: "smooth" })
-              }
-            >
-              Skills
-            </StyledNavButton>
-            <StyledNavButton
-              size="large"
-              variant="text"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ block: "start", behavior: "smooth" })
-              }
-            >
-              Contact
-            </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("about")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                About
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Projects
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("skills")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Skills
+              </StyledNavButton>
+              <StyledNavButton
+                size="large"
+                variant="text"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ block: "start", behavior: "smooth" })
+                }
+              >
+                Contact
+              </StyledNavButton>
+            </Stack>
+            <Stack spacing={{ xs: 1, sm: 0, md: 1 }} direction="row">
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="GitHub"
+                sx={{ display: { xs: "inline-flex" } }}
+                href="https://github.com/katzkowski"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="LinkedIn"
+                sx={{ display: { xs: "inline-flex" } }}
+                href="https://www.linkedin.com/in/kevin-katzkowski"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ display: { xs: "inline-flex", sm: "none" } }}
+                onClick={() => setOpen(true)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Stack>
           </Stack>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ display: { xs: "inline-flex", sm: "none" } }}
-            onClick={() => setOpen(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-
           <SwipeableDrawer
             anchor="right"
             open={open}

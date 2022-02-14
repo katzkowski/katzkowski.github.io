@@ -1,6 +1,7 @@
-import { Button, Container, Paper, Typography } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Container, IconButton, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
-import { MdWavingHand } from "react-icons/md";
 
 export const Contact = () => {
   return (
@@ -26,9 +27,42 @@ export const Contact = () => {
         <Typography variant="h5" component="div">
           I'm happy to hear from you!
         </Typography>
-        <Button variant="outlined" sx={{ my: 3 }} endIcon={<MdWavingHand />}>
+        {/* <Button variant="outlined" sx={{ my: 3 }} endIcon={<MdWavingHand />}>
           Say hello
-        </Button>
+        </Button> */}
+        <Stack
+          spacing={{ xs: 1 }}
+          direction="row"
+          sx={{
+            mt: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="GitHub"
+            sx={{ display: { xs: "inline-flex" }, color: "primary.main" }}
+            href="https://github.com/katzkowski"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </IconButton>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="LinkedIn"
+            sx={{ display: { xs: "inline-flex" }, color: "primary.main" }}
+            href="https://www.linkedin.com/in/kevin-katzkowski"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon />
+          </IconButton>
+        </Stack>
       </Paper>
     </Container>
   );

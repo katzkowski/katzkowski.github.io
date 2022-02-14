@@ -11,6 +11,26 @@ export const Projects = () => {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <Project
+            title="Traffic Sign Classification with Neural Networks"
+            summary="Trained and implemented several neural networks for the task of traffic sign classification"
+            devProcessItems={[
+              "Dataset from German Traffic Sign Recognition Benechmark (GTSRB)",
+              "Implemented fully-connected and convolutional neural networks in PyTorch",
+              "Explored data augmentation and different architectures",
+              "Hyperparameter tuning for architecture choices and optimization algorithms",
+              "Planned implementationss: residual networks, (variational) autoencoder",
+              "Best test accuracy: 94.05% (2 conv. layers, max pooling, ReLU, BN, 2 FC layers)",
+            ]}
+            technologies={["Python", "PyTorch", "Tensorboard"]}
+            image={"/traffic-sign-classification.jpg"}
+            repoLink={
+              "https://github.com/katzkowski/traffic-sign-classification"
+            }
+            large
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Project
             title="Generating Website Layouts with AI from Natural Language Input"
             summary="Trained Generative Adversarial Networks (GANs) to generate images of websites based on natural language messages send to a chatbot"
             devProcessItems={[
@@ -19,8 +39,6 @@ export const Projects = () => {
               "Re-labeled dataset based on visual similarity based on k-means clustering and label quality metrics",
               "Self-developed chatbot based on spaCy NLP library",
               "Multiple GANs trained at large-scale with transfer learning approach using Google Cloud Platform and PyTorch",
-              "NVIDIA Tesla V100 GPU used as accelerator and for higher image resolution (512 x 512 px)",
-              "Developed chatbot from scratch with spaCy NLP library",
               "Chatbot UI written in React using Material-UI framework",
             ]}
             technologies={[
@@ -31,10 +49,9 @@ export const Projects = () => {
               "Google Cloud",
               "scikit-learn",
               "spaCy",
-              "Flask",
               "React",
             ]}
-            image={"/generated-websites-samples.jpg"}
+            image={"/generated-websites-samples-small.jpg"}
             repoLink={"https://github.com/katzkowski/webgen-chatbot"}
             websiteLink={"https://webgen-bot.netlify.app/"}
             // pdfLink={"/"}
@@ -43,11 +60,12 @@ export const Projects = () => {
         </Grid>
         <Grid item xs={12}>
           <Project
-            title="Song Popularity Prediction"
-            summary="Prediction of a song's popularity based on musical features and artist data from Spotify, in combination with self-collected lyrical features"
+            title="Song Popularity Prediction using Ensemble Learning"
+            summary="Prediction of a song's popularity based on musical features, lyrics and artist data"
             devProcessItems={[
+              "Musical features and artist data from Spotify dataset",
               "Lyrics for songs of Spotify dataset fetched from Genius API",
-              "Stored songs with custom lyric metrics and other features in SQL database",
+              "Stored songs with self-created lyrical features and other features in SQL database",
               "Trained classifiers for musical, lyrical and artist features",
               "Used ensemble learning methods to increase accurarcy",
             ]}
@@ -61,7 +79,7 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="algo-lib"
-            summary="Library of algorithms encountered during studies with short descriptions and complexity information"
+            summary="Library of algorithms encountered during studies with short descriptions"
             devProcessItems={[
               "Developed with React and Gatsby.js",
               "Data management with GraphQL",
@@ -99,7 +117,7 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="Elephanture Chatbot"
-            summary="Development of an interactive adventure-game chatbot which makes use of the OpenAI GPT-2"
+            summary="Interactive adventure-game chatbot which makes use of the OpenAI GPT-2"
             devProcessItems={[
               "Team leader of project group of 12 students",
               "Project management with Jira",
@@ -122,7 +140,7 @@ export const Projects = () => {
         <Grid item xs={12} md={6}>
           <Project
             title="chemulator"
-            summary="Java application for the computation of chemical formulas  available on Desktop and Android "
+            summary="Java application for the computation of chemical formulas  available on Desktop/Android "
             devProcessItems={[
               "Desktop application with Java 8 and JavaFX",
               "Android app developed in Android Studio",

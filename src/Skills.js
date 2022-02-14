@@ -51,17 +51,17 @@ export const Skills = () => {
           {/* AI technologies */}
           <Grid item xs={8} sm={5} md={3}>
             <Typography variant="h5" component="h5" sx={{ my: 2 }}>
-              AI & Data Science
+              ML & Data Science
             </Typography>
             <TechnologyList
               direction="column"
               technologies={[
                 "Pytorch",
+                "numpy",
                 "scikit-learn",
                 "spaCy",
                 "Jupyter",
                 "Pandas",
-                "Keras",
                 "matplotlib",
               ]}
               large

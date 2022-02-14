@@ -35,7 +35,7 @@ export const Landing = () => {
           sx={{ my: 2, maxWidth: "70%" }}
         >
           M. Sc. Informatics student at the Technical University of Munich
-          focused on deep learning, data science and artificial intelligence.
+          focused on deep and machine learning.
         </Typography>
 
         <Button

@@ -22,49 +22,48 @@ export const About = () => {
         <Grid container spacing={4}>
           {/* Personal description */}
           <Grid item xs={12} lg={5}>
-            <Typography variant="h6" component="h6">
+            {/* <Typography variant="h6" component="h6">
               Kevin Katzkowski
             </Typography>
 
             <Typography variant="caption" component="div" sx={{ mb: 3 }}>
               M. Sc. Informatics student at the Technical University of Munich
+            </Typography> */}
+
+            <Typography variant="body1" component="div" sx={{ mt: 5, mb: 2 }}>
+              I'm a Master Informatics student at TUM in the first semester with
+              a huge passion for artificial intelligence and computer science in
+              general. Specifically, I'm focused on deep learning with neural
+              networks, machine learning, data science and interested in
+              subfields like computer vision and natural language processing.
             </Typography>
 
             <Typography variant="body1" component="div" sx={{ mb: 2 }}>
-              I'm a Master Informatics student in the first semester with a huge
-              passion for computer science and technology in general.
-              Specifically, I'm focused on deep learning, computer vision, data
-              science and other artificial intelligence topics like machine
-              learning and natural language processing.
-            </Typography>
-
-            <Typography variant="body1" component="div" sx={{ mb: 2 }}>
-              Software development is another passion of mine. I have three
-              years of experience in several programming languages, including
-              Python, JavaScript, Java and others. See the{" "}
+              I have three years of experience in several programming languages,
+              including Python, JavaScript, Java and others (see{" "}
               <Link href="#skills" underline="hover">
                 skills
-              </Link>{" "}
-              section for a comprehensive list and the{" "}
+              </Link>
+              ). The{" "}
               <Link href="#projects" underline="hover">
                 projects
               </Link>{" "}
-              section below for a selection of my projects at the intersection
-              of AI, data science and software development.
+              section below highlights a selection of my work at the
+              intersection of AI, data science and software development.
             </Typography>
 
             <Typography variant="body1" component="div" sx={{ mb: 2 }}>
               Besides that, I enjoy solving complex mathematical and logical
-              problems. In my Media Informatics bachelor's studies, I
-              additionally took modules in the mathematical and logical domain
-              worth 37 credits to extend my theoretical background.
+              problems. I additionally took modules in the mathematical and
+              logical domain worth 37 credits to extend my theoretical
+              background during my bachelor's studies.
             </Typography>
 
             <Typography variant="body1" component="div" sx={{ mb: 2 }}>
               My clear aim for the future is to continue my specialization in
-              deep learning, computer vision as well as machine learning, so I
-              can significantly contribute to the technological advance in the
-              field of artificial intelligence and data science.
+              deep learning and machine learning, so I can significantly
+              contribute to research and the technological advance in the field
+              of artificial intelligence.
             </Typography>
           </Grid>
 
