@@ -31,15 +31,14 @@ export const About = () => {
             </Typography> */}
 
             <Typography variant="body1" component="div" sx={{ mt: 5, mb: 2 }}>
-              I'm a Master Informatics student at TUM in the first semester with
+              I'm a Master Informatics student at TUM in the third semester with
               a huge passion for artificial intelligence and computer science in
-              general. Specifically, I'm focused on deep learning with neural
-              networks, machine learning, data science and interested in
-              subfields like computer vision and natural language processing.
+              general. Specifically, I'm focused on deep learning in the 3D
+              domain of computer vision.
             </Typography>
 
             <Typography variant="body1" component="div" sx={{ mb: 2 }}>
-              I have three years of experience in several programming languages,
+              I have four years of experience in several programming languages,
               including Python, JavaScript, Java and others (see{" "}
               <Link href="#skills" underline="hover">
                 skills
@@ -61,7 +60,7 @@ export const About = () => {
 
             <Typography variant="body1" component="div" sx={{ mb: 2 }}>
               My clear aim for the future is to continue my specialization in
-              deep learning and machine learning, so I can significantly
+              deep learning and computer vision, so I can significantly
               contribute to research and the technological advance in the field
               of artificial intelligence.
             </Typography>

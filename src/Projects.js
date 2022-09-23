@@ -11,25 +11,41 @@ export const Projects = () => {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <Project
-            title="Traffic Sign Classification with Neural Networks"
-            summary="Trained and implemented several neural networks for the task of traffic sign classification"
+            title="Few-Shot 3D Reconstruction"
+            summary="Proposed to learn 3D reconstruction of object in the few-shot setting with contrastive priors"
             devProcessItems={[
-              "Dataset from German Traffic Sign Recognition Benechmark (GTSRB)",
-              "Implemented fully-connected and convolutional neural networks in PyTorch",
-              "Explored data augmentation and different architectures",
-              "Hyperparameter tuning for architecture choices and optimization algorithms",
-              "Planned implementationss: residual networks, (variational) autoencoder",
-              "Best test accuracy: 94.05% (2 conv. layers, max pooling, ReLU, BN, 2 FC layers)",
+              "Pre-trained an auto-decoder in a contrastive way",
+              "Fine-tuned models in a few-shot setting",
+              "Further explored joined shape-image latent space",
+              "Approach produces competitive few-shot reconstruction results",
             ]}
-            technologies={["Python", "PyTorch", "Tensorboard"]}
-            image={"/traffic-sign-classification.jpg"}
-            repoLink={
-              "https://github.com/katzkowski/traffic-sign-classification"
-            }
+            technologies={["Python", "PyTorch"]}
+            image={"/few-shot-bench-reconstructions.jpg"}
+            // repoLink={"https://github.com/katzkowski"}
+            // websiteLink={""}
+            // pdfLink={"/"}
             large
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={6}>
+          <Project
+            title="Dense Point Cloud Prediction from a Single RGB Image"
+            summary="Developed a method to generate high-resolution point clouds given a single RGB image"
+            devProcessItems={[
+              "Proposed two-stage training process: first predict a coarse point cloud, then densify it",
+              "Implemented PSGN to infer the coarse point cloud from the input image",
+              "Used folding-based decoder to densify the point cloud",
+              "Method outperforms PGSN baseline",
+            ]}
+            technologies={["Python", "PyTorch"]}
+            image={"/dense-point-cloud-predictions.png"}
+            // repoLink={"https://github.com/katzkowski"}
+            // websiteLink={""}
+            // pdfLink={"/"}
+            // large
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
           <Project
             title="Generating Website Layouts with AI from Natural Language Input"
             summary="Trained Generative Adversarial Networks (GANs) to generate images of websites based on natural language messages send to a chatbot"
@@ -55,10 +71,28 @@ export const Projects = () => {
             repoLink={"https://github.com/katzkowski/webgen-chatbot"}
             websiteLink={"https://webgen-bot.netlify.app/"}
             // pdfLink={"/"}
-            large
+            // large
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={6}>
+          <Project
+            title="Traffic Sign Classification with Neural Networks"
+            summary="Trained and implemented several neural networks for the task of traffic sign classification"
+            devProcessItems={[
+              "Dataset from German Traffic Sign Recognition Benechmark (GTSRB)",
+              "Implemented fully-connected and convolutional neural networks in PyTorch",
+              "Explored data augmentation and different architectures",
+              "Hyperparameter tuning for architecture choices and optimization algorithms",
+              "Best test accuracy: 94.05% (2 conv. layers, max pooling, ReLU, BN, 2 FC layers)",
+            ]}
+            technologies={["Python", "PyTorch", "Tensorboard"]}
+            image={"/traffic-sign-classification.jpg"}
+            repoLink={
+              "https://github.com/katzkowski/traffic-sign-classification"
+            }
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
           <Project
             title="Song Popularity Prediction using Ensemble Learning"
             summary="Prediction of a song's popularity based on musical features, lyrics and artist data"
@@ -70,10 +104,9 @@ export const Projects = () => {
               "Used ensemble learning methods to increase accurarcy",
             ]}
             technologies={["Python", "Pandas", "Scikit-Learn", "MySQL"]}
-            image={"/song-popularity-hero.JPG"}
+            image={"/song-popularity-hero-small.jpg"}
             repoLink={"https://github.com/jakhac/song-popularity"}
             // pdfLink={"/"}
-            large
           />
         </Grid>
         <Grid item xs={12} md={6}>
